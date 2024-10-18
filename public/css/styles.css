@@ -1,47 +1,100 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
 }
 
+/* Container */
 .login-container {
-    width: 300px;
-    margin: 100px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    width: 350px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     text-align: center;
-    margin-bottom: 20px;
 }
 
-label {
-    display: block;
-    margin: 10px 0 5px;
+/* Title */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(to right, #ff6fd8, #3813c2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-input {
+/* Input fields */
+input, select {
     width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-}
-
-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
+    padding: 0.75rem;
+    margin: 0.75rem 0;
     border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
     color: #fff;
+    font-size: 1rem;
+}
+
+/* Role dropdown */
+select {
+    appearance: none;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iOSIgdmlld0JveD0iMCAwIDE2IDkiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEuNTEgMS4zMkw4IDguNjdsNi41LTEuMzEuMjgtLjQtNy03LS4yOC0uNDQtNyA3eiIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg==');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    padding-right: 30px;
+}
+
+/* Password field with toggle */
+.password-container {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #0056b3;
+/* Buttons */
+button {
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #ff6fd8, #3813c2);
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s;
 }
 
+button:hover {
+    background: linear-gradient(90deg, #3813c2, #ff6fd8);
+}
+
+/* Disabled button state */
+button:disabled {
+    background: rgba(255, 255, 255, 0.3);
+    cursor: not-allowed;
+}
+
+/* Message styles */
 #message {
-    margin-top: 20px;
-    text-align: center;
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #ff6fd8;
 }
